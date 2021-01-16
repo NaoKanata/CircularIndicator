@@ -11,7 +11,7 @@ class App extends React.Component {
             minute: 0,
             second: 0,
         }
-        setTimeout(this._timer, 100);
+        setTimeout(this._timer, 16);
     }
 
     render() {
@@ -49,7 +49,7 @@ class App extends React.Component {
         this.setState({
             progress: localStorage.getItem("progress")
         });
-        setTimeout(this._timer, 100)
+        setTimeout(this._timer, 16)
     }
 
     _click = () => {

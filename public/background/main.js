@@ -1,6 +1,6 @@
 localStorage.setItem("progress", 0);
 localStorage.setItem("length", 0);
-setTimeout(timer, 100);
+setTimeout(timer, 16);
 
 var data = 0
 function timer() {
@@ -22,5 +22,5 @@ function timer() {
         }
         data+=1;
     }
-    setTimeout(timer, 100);
+    setTimeout(timer, 16);
 }
