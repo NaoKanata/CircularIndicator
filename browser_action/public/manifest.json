@@ -1,0 +1,16 @@
+{
+    "name": "Circular Indicator",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Circular Indicator",
+    "browser_action": {
+        "default_title": "hogehoge Circular Indicator",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": [
+            "background/main.js"
+        ],
+        "persistent": true
+    }
+}
