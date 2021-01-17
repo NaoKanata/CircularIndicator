@@ -1,4 +1,4 @@
-# CircularIndicator
+# Circular Indicator
 円のパーセンテージで表示するタイマーのChrome拡張です
 
 ## インストール方法
