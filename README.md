@@ -1,6 +1,6 @@
 # Circular Indicator
 円のパーセンテージで表示するタイマーのChrome拡張です
-
+![Logo](https://github.com/NaoKanata/CircularIndicator/blob/main/public/Logo.png "Circular Indicator")
 ## インストール方法
 1. https://github.com/NaoKanata/CircularIndicator/releases から最新の CircularIndicator_v**.**.**.zip をダウンロードする
 2. ダウンロードしたzipファイルを解凍
