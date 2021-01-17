@@ -4,7 +4,7 @@
 ## インストール方法
 1. https://github.com/NaoKanata/CircularIndicator/releases から最新の CircularIndicator_v**.**.**.zip をダウンロードする
 2. ダウンロードしたzipファイルを解凍
-3. 解答したbuildディレクトリを chrome://extensions/ のページ上にドラッグ&ドロップする
+3. 解答したbuildディレクトリを [Chrome拡張機能を管理](chrome://extensions/) のページ上にドラッグ&ドロップする
 
 ## 使い方
 1. アイコンをクリック
