@@ -1,8 +1,8 @@
 .App {
     text-align: center;
     margin: 10px;
-    width: 300px;
     min-height: 100px;
+    min-width: 280px;
 }
 
 .inputContainer {
@@ -11,8 +11,19 @@
 
 .inputItem {
     margin: 4px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    width: 33%;
 }
 
 .TempleteField {
     margin: 4px;
+}
+
+.OtherButtonContainer {
+    display: flex;
+}
+
+.OtherButton {
+    width: 50%;
 }
