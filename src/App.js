@@ -5,8 +5,13 @@ import {
     Button,
     TextField
 } from '@material-ui/core';
-import Icon from './logo.png';
+import Logo from './Logo.png';
 import MenuItem from '@material-ui/core/MenuItem';
+
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import StopIcon from '@material-ui/icons/Stop';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import PostAddIcon from '@material-ui/icons/PostAdd';
 
 const currencies = [
     {
@@ -47,6 +52,26 @@ class App extends React.Component {
             templete: '25',
         }
         setTimeout(this._timer, 16);
+    }
+
+    _footer = () => {
+        return (
+            <>
+                <div class="OtherButtonContainer">
+                    <div class="OtherButton">
+                        <Button variant="outlined" color="primary" onClick={this._clickAddPage}>
+                            <PostAddIcon />
+                        </Button>
+                    </div>
+                    <div class="OtherButton">
+                        <Button variant="outlined" color="primary" onClick={this._clickGithub}>
+                            <GitHubIcon />
+                        </Button>
+                    </div>
+                </div>
+                <p>Copyright © 2021 naok All Rights Reserved.</p>
+            </>
+        );
     }
 
     _handleChange = (event) => {
@@ -103,8 +128,9 @@ class App extends React.Component {
             return (
                 <div class="hgoehoge">
                     <Button variant="contained" color="primary" onClick={this._stopClick}>
-                        STOP
+                        <StopIcon />
                     </Button>
+                    {this._footer()}
                 </div>
             );
         }
@@ -119,6 +145,7 @@ class App extends React.Component {
                                 label="Hour"
                                 variant="filled"
                                 type="number"
+                                fullWidth="true"
                                 value={this.state.hour}
                                 onChange={this._inputChange}
                             />
@@ -130,6 +157,7 @@ class App extends React.Component {
                                 label="Minute"
                                 variant="filled"
                                 type="number"
+                                fullWidth="true"
                                 value={this.state.minute}
                                 onChange={this._inputChange}
                             />
@@ -141,13 +169,14 @@ class App extends React.Component {
                                 label="Second"
                                 variant="filled"
                                 type="number"
+                                fullWidth="true"
                                 value={this.state.second}
                                 onChange={this._inputChange}
                             />
                         </div>
                     </div>
                     <Button variant="contained" color="primary" onClick={this._click}>
-                        START
+                        <PlayArrowIcon />
                     </Button>
                     <div class="TempleteField">
                         <TextField
@@ -165,6 +194,7 @@ class App extends React.Component {
                             ))}
                         </TextField>
                     </div>
+                    {this._footer()}
                 </>
             );
         }
@@ -174,11 +204,11 @@ class App extends React.Component {
         return (
             <div class="App">
                 <div>
-                    <img src={Icon} alt="Circular Indicator" width="25%"/>
+                    <img src={Logo} alt="Circular Indicator" width="82px"/>
                 </div>
                 <Circle
                     animate={false}
-                    size={80}
+                    size={200}
                     lineWidth={40}
                     progress={this.state.progress}
                     bgColor="#dddddd"
@@ -222,6 +252,15 @@ class App extends React.Component {
         localStorage.setItem("length", Number(this.state.hour) * 60 * 60 + Number(this.state.minute) * 60 + Number(this.state.second));
         localStorage.setItem("nowDate", (new Date()).getTime());
         localStorage.setItem("isRunning", true);
+    }
+
+    _clickGithub = () => {
+        window.open('https://github.com/NaoKanata/CircularIndicator', '_blank');
+    }
+
+
+    _clickAddPage = () => {
+        window.open('./index.html', '_blank');
     }
 }
 
