@@ -54,6 +54,26 @@ class App extends React.Component {
         setTimeout(this._timer, 16);
     }
 
+    _footer = () => {
+        return (
+            <>
+                <div class="OtherButtonContainer">
+                    <div class="OtherButton">
+                        <Button variant="outlined" color="primary" onClick={this._clickAddPage}>
+                            <PostAddIcon />
+                        </Button>
+                    </div>
+                    <div class="OtherButton">
+                        <Button variant="outlined" color="primary" onClick={this._clickGithub}>
+                            <GitHubIcon />
+                        </Button>
+                    </div>
+                </div>
+                <p>Copyright © 2021 naok All Rights Reserved.</p>
+            </>
+        );
+    }
+
     _handleChange = (event) => {
         this.setState({ templete: event.target.value });
         switch (event.target.value)
@@ -110,6 +130,7 @@ class App extends React.Component {
                     <Button variant="contained" color="primary" onClick={this._stopClick}>
                         <StopIcon />
                     </Button>
+                    {this._footer()}
                 </div>
             );
         }
@@ -173,19 +194,7 @@ class App extends React.Component {
                             ))}
                         </TextField>
                     </div>
-                    <div class="OtherButtonContainer">
-                        <div class="OtherButton">
-                            <Button variant="outlined" color="primary" onClick={this._clickAddPage}>
-                                <PostAddIcon />
-                            </Button>
-                        </div>
-                        <div class="OtherButton">
-                            <Button variant="outlined" color="primary" onClick={this._clickGithub}>
-                                <GitHubIcon />
-                            </Button>
-                        </div>
-                    </div>
-                    <p>Copyright © 2021 naok All Rights Reserved.</p>
+                    {this._footer()}
                 </>
             );
         }
